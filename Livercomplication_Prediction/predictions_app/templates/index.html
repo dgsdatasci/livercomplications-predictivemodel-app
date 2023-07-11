@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liver Complication Prediction App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #dedff8;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Machine Learning Liver Complication Prediction Application</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/predict" method="post">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" name="age" id="age" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sex">Sex:</label>
+                        <select name="sex" id="sex" class="form-control">
+                            <option value="0">Female</option>
+                            <option value="1">Male</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alb">ALB (g/dL):</label>
+                        <input type="number" name="alb" id="alb" step="0.01" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alp">ALP (IU/L):</label>
+                        <input type="number" name="alp" id="alp" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alt">ALT (IU/L):</label>
+                        <input type="number" name="alt" id="alt" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="ast">AST (IU/L):</label>
+                        <input type="number" name="ast" id="ast" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bil">BIL (mg/dL):</label>
+                        <input type="number" name="bil" id="bil" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="che">CHE (U/L):</label>
+                        <input type="number" name="che" id="che" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chol">CHOL (mg/dL):</label>
+                        <input type="number" name="chol" id="chol" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ggt">GGT (UI/L):</label>
+                        <input type="number" name="ggt" id="ggt" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prot">PROT (g/dL):</label>
+                        <input type="number" name="prot" id="prot" class="form-control">
+                    </div>
+
+                    <!-- Add input fields for other variables here -->
+
+                    <input type="submit" value="Predict" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

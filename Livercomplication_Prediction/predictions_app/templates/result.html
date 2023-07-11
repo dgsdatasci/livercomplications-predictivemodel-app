@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Learning App - Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .result-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: {% if prediction == 1 %} #ffcccc {% else %} #cce6ff {% endif %};
+        }
+
+        .result-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1 class="result-title">Machine Learning App - Result</h1>
+        {% if prediction == 0 %}
+            <p>This model predicts the patient is unlikely to have liver complications.</p>
+        {% elif prediction == 1 %}
+            <p>This model predicts the patient is likely to have liver complications.</p>
+        {% else %}
+            <p>Invalid prediction value.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
